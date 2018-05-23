@@ -14,7 +14,8 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    @@songs << self
+    unless genreHash.include?(name)
+      @@genreHash[genre] += 1
 
     unless @@artists.include?(artist)
       @@artists << artist
