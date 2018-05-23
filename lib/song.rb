@@ -6,6 +6,7 @@ class Song
   @@artists = []
   @@genres = []
   @@library = {}
+  @@genreCounter = {}
 
   attr_accessor :name, :artist, :genre
 
@@ -49,7 +50,10 @@ class Song
   end
 
   def self.genre_count
-    binding.pry
+    @@library.each do |artist, genre|
+      genre.each do |song|
+        @@genreCounter[genre] += 1
+    end
   end
 
 end
