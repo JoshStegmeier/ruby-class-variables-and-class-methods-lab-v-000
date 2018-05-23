@@ -53,9 +53,7 @@ class Song
   end
 
   def self.genre_count
-    @@library.each do |artist, genre|
-      genre.each do ||
-    end
+    binding.pry
   end
 
 end
