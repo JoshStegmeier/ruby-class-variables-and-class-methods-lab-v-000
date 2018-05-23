@@ -71,6 +71,7 @@ class Song
         @@artistCounter[artist] =+ song.size
       end
     end
+    @@artistCounter
   end
 
 end
