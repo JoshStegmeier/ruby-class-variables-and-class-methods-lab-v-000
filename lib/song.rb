@@ -66,7 +66,7 @@ class Song
     @@library.each do |artist, genre|
       genre.each do |genre, song|
         unless @@artistCounter[artist] == nil
-          @@@artistCounter[artist] = Hash.new
+          @@artistCounter[artist] = Hash.new
         end
         @@artistCounter[artist] =+ song.size
       end
