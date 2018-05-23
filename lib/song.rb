@@ -1,7 +1,7 @@
 class Song
 
   SONGNAMES = []
-  ARISTS = []
+  ARTISTS = []
   GENRES = []
 
   attr_accessor :name, :artist, :genre
