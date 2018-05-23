@@ -51,7 +51,7 @@ class Song
 
   def self.genre_count
     @@library.each do |artist, genre|
-      genre.each do |song|
+      genre.each do |song, two|
         binding.pry
       end
     end
