@@ -17,6 +17,7 @@ class Song
 
     if @@library[artist] == nil
       @@library = Hash.new {|h, k| h[k] = ''}
+    end
 
     unless @@artists.include?(artist)
       @@artists << artist
