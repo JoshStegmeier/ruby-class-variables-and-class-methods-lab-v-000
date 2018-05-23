@@ -28,7 +28,7 @@ class Song
     else
       @@genreHash[genre] = 1
     end
-    
+
   end
 
   def self.count
