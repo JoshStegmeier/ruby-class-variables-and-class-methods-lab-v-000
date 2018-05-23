@@ -16,7 +16,7 @@ class Song
     @@count += 1
 
     if @@library[artist] == nil
-      @@library = Hash.new {|h, k| h[k] = ''}
+      @@library[artist] = Hash.new
     end
 
     unless @@artists.include?(artist)
