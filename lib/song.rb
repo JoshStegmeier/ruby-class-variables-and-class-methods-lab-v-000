@@ -22,13 +22,10 @@ class Song
     unless GENRES.include?(genre)
       GENRES << genre
     end
-
   end
 
-
-
   def name
-    @name
+    self.name
   end
 
 end
