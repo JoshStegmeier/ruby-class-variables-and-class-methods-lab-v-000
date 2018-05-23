@@ -14,7 +14,7 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    unless genreHash.include?(name)
+    unless @@genreHash.include?(name)
       @@genreHash[genre] += 1
     end
 
