@@ -58,14 +58,7 @@ class Song
         @@genreCounter[genre] =+ song.size
       end
     end
-    #   unless @@genreCounter[genre]
-    #     @@genreCounter[genre] = 0
-    #   end
-    #
-    #     @@genreCounter[genre] += 1
-    #   end
-    # end
-    # @@genreCounter
+    @@genreCounter
   end
 
 end
