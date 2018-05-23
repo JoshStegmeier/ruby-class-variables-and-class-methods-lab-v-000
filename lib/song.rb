@@ -54,7 +54,7 @@ class Song
       genre.each do |genre, song|
         # @@genreCounter[genre] = Hash.new
         binding.pry
-        @@genreCounter[genre] += song.size
+        # @@genreCounter[genre] += song.size
       end
     end
     #   unless @@genreCounter[genre]
