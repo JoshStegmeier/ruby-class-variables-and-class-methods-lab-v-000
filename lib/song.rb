@@ -16,7 +16,7 @@ class Song
     @@count += 1
 
     unless @@library[artist][genre].include?(name)
-      @@library[artist][genre][song] = self
+      @@library[artist][genre][name] = self
     end
 
     unless @@artists.include?(artist)
