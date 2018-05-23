@@ -19,6 +19,18 @@ class Song
       @@library[artist] = Hash.new
     end
 
+    if @@library[artist][genre] == nil
+      @@library[artist][genre] = Hash.new
+    end
+
+    if @@library[artist][genre][:songs] == nil
+      @@library[artist][genre][:songs] = []
+    end
+
+    unless @@library[artist][genre][:songs].include?(name)
+      @@library[artist][genre][:songs] << name
+    end
+
     unless @@artists.include?(artist)
       @@artists << artist
     end
