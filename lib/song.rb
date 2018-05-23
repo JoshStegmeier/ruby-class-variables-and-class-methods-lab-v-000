@@ -23,12 +23,12 @@ class Song
       @@library[artist][genre] = Hash.new
     end
 
-    if @@library[artist][genre][:songs] == nil
-      @@library[artist][genre][:songs] = []
+    if @@library[artist][genre] == nil
+      @@library[artist][genre] = []
     end
 
-    unless @@library[artist][genre][:songs].include?(name)
-      @@library[artist][genre][:songs] << name
+    unless @@library[artist][genre].include?(name)
+      @@library[artist][genre] << name
     end
 
     unless @@artists.include?(artist)
@@ -53,7 +53,9 @@ class Song
   end
 
   def self.genre_count
-    binding.pry
+    @@library.each do |artist, genre|
+      genre.each do ||
+    end
   end
 
 end
