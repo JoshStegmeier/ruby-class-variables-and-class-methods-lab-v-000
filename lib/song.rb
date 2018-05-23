@@ -7,6 +7,7 @@ class Song
   @@genres = []
   @@library = {}
   @@genreCounter = {}
+  @@artistCounter = {}
 
   attr_accessor :name, :artist, :genre
 
@@ -59,6 +60,10 @@ class Song
       end
     end
     @@genreCounter
+  end
+
+  def self.artist_count
+    @@
   end
 
 end
