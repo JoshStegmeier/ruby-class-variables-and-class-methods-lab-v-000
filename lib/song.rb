@@ -20,7 +20,7 @@ class Song
     end
 
     unless GENRES.include?(genre)
-      GENRES >> genre
+      GENRES << genre
     end
 
   end
