@@ -15,9 +15,9 @@ class Song
     @genre = genre
     @@count += 1
 
-    unless @@library[artist][genre].include?(name)
-      @@library[artist][genre][name] << self
-    end
+    # unless @@library[artist][genre].include?(name)
+    #   @@library[artist][genre][name] << self
+    # end
 
     unless @@artists.include?(artist)
       @@artists << artist
@@ -41,7 +41,7 @@ class Song
   end
 
   def self.genre_count
-    @@genreHash
+    binding.pry
   end
 
 end
