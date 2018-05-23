@@ -29,4 +29,8 @@ class Song
     @@artists
   end
 
+  def genres
+    @@genres
+  end
+
 end
