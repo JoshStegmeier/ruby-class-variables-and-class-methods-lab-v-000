@@ -52,7 +52,9 @@ class Song
   def self.genre_count
     @@library.each do |artist, genre|
       genre.each do |genre, song|
-        @@genreCounter[genre] = Hash.new
+        unless @@genreCounter[genre] == nil
+          @@genreCounter[genre] = Hash.new
+        end
         @@genreCounter[genre] =+ song.size
       end
     end
