@@ -51,7 +51,7 @@ class Song
 
   def self.genre_count
     @@library.each do |artist, genre|
-
+      binding.pry
     end
     #   unless @@genreCounter[genre]
     #     @@genreCounter[genre] = 0
@@ -61,7 +61,6 @@ class Song
     #   end
     # end
     # @@genreCounter
-    binding.pry
   end
 
 end
