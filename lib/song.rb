@@ -15,8 +15,8 @@ class Song
     @genre = genre
     @@count += 1
 
-    unless @@library[artist][:songs].include?(name)
-      @@library[artist][:songs][name] = genre
+    unless @@library[artist][genre].include?(name)
+      @@library[artist][genre][song] = self
     end
 
     unless @@artists.include?(artist)
