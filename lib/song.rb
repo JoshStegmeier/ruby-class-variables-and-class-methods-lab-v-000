@@ -63,7 +63,14 @@ class Song
   end
 
   def self.artist_count
-    @@
+    @@library.each do |artist, genre|
+      genre.each do |genre, song|
+        unless @@artistCounter[artist] == nil
+          @@@artistCounter[artist] = Hash.new
+        end
+        @@artistCounter[artist] =+ song.size
+      end
+    end
   end
 
 end
