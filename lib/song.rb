@@ -2,7 +2,10 @@ require 'pry'
 
 class Song
 
-  @@music = {}
+  @@count = 0
+  @@artists = []
+  @@genres = []
+  @@songs = {}
 
   attr_accessor :name, :artist, :genre
 
@@ -11,6 +14,7 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
+    @@songs << self
 
     unless @@artists.include?(artist)
       @@artists << artist
