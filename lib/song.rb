@@ -20,10 +20,6 @@ class Song
     end
 
     if @@library[artist][genre] == nil
-      @@library[artist][genre] = Hash.new
-    end
-
-    if @@library[artist][genre] == nil
       @@library[artist][genre] = []
     end
 
