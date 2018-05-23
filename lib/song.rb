@@ -58,6 +58,7 @@ class Song
         @@genreCounter[genre] += 1
       end
     end
+    @@genreCounter
   end
 
 end
