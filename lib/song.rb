@@ -25,7 +25,6 @@ class Song
   end
 
   def name
-    self.name
   end
 
 end
