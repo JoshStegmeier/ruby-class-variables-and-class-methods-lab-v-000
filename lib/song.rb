@@ -5,6 +5,7 @@ class Song
   @@count = 0
   @@artists = []
   @@genres = []
+  @@genreHash = {}
 
   attr_accessor :name, :artist, :genre
 
@@ -21,6 +22,13 @@ class Song
     unless @@genres.include?(genre)
       @@genres << genre
     end
+
+    if @@genreHash.has_key?(genre)
+      @@genreHash[genre] += 1
+    else
+      @@genreHash[genre] = 1
+    end
+    
   end
 
   def self.count
