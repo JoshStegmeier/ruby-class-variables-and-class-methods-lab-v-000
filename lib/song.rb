@@ -1,8 +1,8 @@
 class Song
 
-  SONGNAMES = []
-  ARTISTS = []
-  GENRES = []
+  @@count = 0
+  @@artists = []
+  @@genres = []
 
   attr_accessor :name, :artist, :genre
 
@@ -11,15 +11,11 @@ class Song
     @artist = artist
     @genre = genre
 
-    unless SONGNAMES.include?(name)
-      SONGNAMES << name
-    end
-
-    unless ARTISTS.include?(artist)
+    unless @@artists.include?(artist)
       ARTISTS << artist
     end
 
-    unless GENRES.include?(genre)
+    unless @@genres.include?(genre)
       GENRES << genre
     end
   end
