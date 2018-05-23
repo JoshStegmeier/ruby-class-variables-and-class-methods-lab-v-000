@@ -15,9 +15,8 @@ class Song
     @genre = genre
     @@count += 1
 
-    # unless @@library[artist][genre].include?(name)
-    #   @@library[artist][genre][name] << self
-    # end
+    if @@library[artist] == nil
+      @@library = Hash.new {|h, k| h[k] = ''}
 
     unless @@artists.include?(artist)
       @@artists << artist
