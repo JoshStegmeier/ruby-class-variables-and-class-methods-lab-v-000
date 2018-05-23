@@ -16,6 +16,7 @@ class Song
     @@count += 1
     unless genreHash.include?(name)
       @@genreHash[genre] += 1
+    end
 
     unless @@artists.include?(artist)
       @@artists << artist
