@@ -5,7 +5,7 @@ class Song
   @@count = 0
   @@artists = []
   @@genres = []
-  @@genreHash = {}
+  @@library = {}
 
   attr_accessor :name, :artist, :genre
 
@@ -14,8 +14,9 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    unless @@genreHash.include?(name)
-      @@genreHash[genre] += 1
+
+    unless @@library[artist][:songs].include?(name)
+      @@library[artist][:songs][name] = genre
     end
 
     unless @@artists.include?(artist)
